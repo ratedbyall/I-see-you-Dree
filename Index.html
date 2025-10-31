@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheer Up, Joy!</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fbd3e9, #bb377d);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 600px;
+      animation: fadeIn 3s ease forwards;
+      line-height: 1.6;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff9a9e, 0 0 30px #fad0c4;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ffdde1, 0 0 40px #ff9a9e;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      font-size: 3em;
+      animation: heartbeat 1.5s infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .cloud {
+      position: absolute;
+      top: 10%;
+      width: 100px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: float 15s linear infinite;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: '';
+      position: absolute;
+      background: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      top: -30px;
+      left: 10px;
+    }
+
+    .cloud::after {
+      top: -20px;
+      left: 40px;
+    }
+
+    @keyframes float {
+      from { left: -150px; }
+      to { left: 110%; }
+    }
+
+    .cloud:nth-child(1) { top: 20%; animation-delay: 0s; }
+    .cloud:nth-child(2) { top: 40%; animation-delay: 5s; }
+    .cloud:nth-child(3) { top: 60%; animation-delay: 10s; }
+  </style>
+</head>
+<body>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+  <div class="cloud"></div>
+
+  <h1>Hey Dree 💜</h1>
+  <p>
+    You are stronger, brighter, and more amazing than you think!  
+    Them extracurriculars got nothing on you, and i believe in you.  
+    Keep smiling — the world shines a little more when you do ❤️  
+    <br><br>
+    I see you, champ
+  </p>
+
+  <div class="heart">💗</div>
+</body>
+</html>
 
